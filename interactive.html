@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#6657d9">
+<title>Місія: Мережевий етикет</title>
+<style>
+:root{--bg:#f4f3ff;--card:#fff;--ink:#252344;--muted:#6d6b87;--primary:#6657d9;--primary-dark:#4e40bd;--mint:#dff8ec;--green:#18794e;--pink:#fff0f0;--red:#b42332;--line:#e7e5f4;--gold:#ffcb55}
+*{box-sizing:border-box}body{margin:0;background:radial-gradient(circle at 10% 0%,#e6e2ff 0,transparent 32%),var(--bg);color:var(--ink);font:16px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif;min-height:100vh}
+button{font:inherit;cursor:pointer}button:focus-visible{outline:3px solid #ffbf47;outline-offset:3px}
+.wrap{width:min(920px,100%);margin:auto;padding:22px 18px 36px}.top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:20px}.brand{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.1px}.brand-icon{display:grid;place-items:center;background:var(--primary);color:#fff;border-radius:14px;width:44px;height:44px;font-size:23px;box-shadow:0 7px 16px #6657d933}.pill{background:#fff;border:1px solid var(--line);border-radius:999px;padding:8px 13px;font-weight:750;font-size:14px;white-space:nowrap}
+.card{background:var(--card);border:1px solid #e8e6f7;border-radius:24px;padding:clamp(20px,4vw,36px);box-shadow:0 16px 45px #3930750c}.hero{display:grid;grid-template-columns:1.2fr .8fr;gap:26px;align-items:center}.eyebrow{font-size:12px;letter-spacing:1.5px;font-weight:850;color:var(--primary);text-transform:uppercase}.hero h1{font-size:clamp(30px,5vw,48px);line-height:1.08;margin:12px 0 14px;letter-spacing:-1.2px}.hero p{color:var(--muted);margin:0 0 22px;font-size:17px}.hero-art{min-height:220px;display:grid;place-items:center;border-radius:22px;background:linear-gradient(145deg,#eeeaff,#e5f9f0);position:relative;overflow:hidden}.planet{font-size:100px;filter:drop-shadow(0 12px 8px #45389b25);animation:float 3s ease-in-out infinite}.bubble{position:absolute;background:#fff;border-radius:16px;padding:9px 12px;box-shadow:0 8px 18px #25234414;font-size:22px}.b1{top:24px;left:20px}.b2{right:20px;top:50px}.b3{bottom:22px;right:35px}@keyframes float{50%{transform:translateY(-8px)}}.primary,.secondary{border:0;border-radius:14px;padding:13px 20px;font-weight:800;transition:transform .15s,background .15s}.primary{background:var(--primary);color:#fff;box-shadow:0 7px 16px #6657d933}.primary:hover{background:var(--primary-dark);transform:translateY(-1px)}.secondary{background:#f0effb;color:var(--primary-dark)}.secondary:hover{background:#e6e3fa}.hint{font-size:13px;color:var(--muted);margin-top:13px}.stats{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:18px}.stat{flex:1;min-width:110px;background:#fff;border:1px solid var(--line);border-radius:15px;padding:10px 13px}.stat small{display:block;color:var(--muted);font-size:12px}.stat strong{font-size:19px}.progress-shell{height:9px;background:#e9e7f6;border-radius:99px;overflow:hidden;margin:12px 0 25px}.progress-fill{height:100%;width:0;background:linear-gradient(90deg,#6b5ce7,#56c89b);border-radius:99px;transition:width .35s}.question-head{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:10px}.level{font-size:12px;font-weight:850;color:#5547c3;background:#eeecff;padding:6px 10px;border-radius:99px}.qnum{font-size:13px;color:var(--muted);font-weight:700}.scenario{background:#f8f7ff;border:1px solid #ece9ff;border-radius:17px;padding:18px;margin:15px 0 20px}.scenario .emoji{font-size:28px;display:block;margin-bottom:5px}.scenario p{margin:0;font-size:16px}.question{font-size:clamp(20px,3vw,26px);line-height:1.25;margin:12px 0 18px;letter-spacing:-.3px}.answers{display:grid;gap:10px}.answer{width:100%;text-align:left;display:flex;align-items:center;gap:12px;padding:14px 15px;background:#fff;border:2px solid var(--line);border-radius:15px;color:var(--ink);font-weight:650;transition:border .15s,background .15s;min-height:58px}.answer:hover:not(:disabled){border-color:#a9a0f2;background:#faf9ff}.letter{width:31px;height:31px;flex:0 0 31px;display:grid;place-items:center;border-radius:10px;background:#f0effa;color:#6256b5;font-weight:850}.answer.correct{border-color:#58c58f;background:#effcf5}.answer.correct .letter{background:#c9f4dc;color:#126c43}.answer.wrong{border-color:#ef9ba2;background:#fff5f5}.answer.wrong .letter{background:#ffe0e2;color:#a61e2b}.answer:disabled{cursor:default}.feedback{display:none;margin-top:16px;border-radius:15px;padding:14px 16px}.feedback.show{display:block;animation:appear .2s ease}.feedback.good{background:var(--mint);color:#155b3c}.feedback.bad{background:var(--pink);color:#84212a}.feedback strong{display:block;margin-bottom:3px}.actions{display:flex;justify-content:space-between;gap:12px;margin-top:20px;align-items:center}.actions .primary{min-width:150px}.result{text-align:center}.award{width:112px;height:112px;margin:4px auto 18px;display:grid;place-items:center;border-radius:50%;font-size:57px;background:linear-gradient(145deg,#fff1bd,#ffe08a);box-shadow:0 12px 25px #e4b74235}.result h1{font-size:clamp(30px,5vw,42px);line-height:1.1;margin:8px 0 12px}.result p{color:var(--muted)}.result-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:24px 0}.result-metric{background:#f8f7ff;border:1px solid var(--line);border-radius:15px;padding:15px 8px}.result-metric strong{display:block;font-size:25px}.result-metric span{font-size:12px;color:var(--muted)}.badge-line{font-weight:800;color:var(--primary-dark);background:#f0efff;border-radius:99px;padding:8px 14px;display:inline-block;margin-bottom:15px}.footer{text-align:center;color:#8986a3;font-size:12px;margin-top:20px}.hidden{display:none!important}@keyframes appear{from{opacity:0;transform:translateY(4px)}to{opacity:1;transform:translateY(0)}}@media(max-width:650px){.wrap{padding:14px 12px 25px}.top{margin-bottom:13px}.hero{grid-template-columns:1fr}.hero-art{min-height:155px;grid-row:1}.planet{font-size:78px}.bubble{font-size:18px;padding:6px 9px}.hero h1{font-size:35px}.hero p{font-size:16px}.card{border-radius:20px}.result-grid{gap:6px}.result-metric{padding:12px 5px}.result-metric strong{font-size:22px}.actions{align-items:stretch}.actions .primary{flex:1}.answer{padding:12px}.pill{font-size:12px;padding:7px 10px}}@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="top">
+    <div class="brand"><div class="brand-icon">💬</div><span>Інформатика · 5 клас</span></div>
+    <div class="pill">🏅 Місія доброзичливості</div>
+  </header>
+  <main>
+    <section id="startScreen" class="card hero">
+      <div>
+        <div class="eyebrow">Інтерактивна пригода</div>
+        <h1 id="gameTitle">Місія: Мережевий етикет</h1>
+        <p id="introText">У віртуальному місті повідомлення іноді губляться, а емоції — плутаються. Допоможи героям спілкуватися ввічливо, безпечно та з повагою!</p>
+        <button id="startBtn" class="primary">Почати місію&nbsp; →</button>
+        <div class="hint">6 коротких випробувань · бали за відповіді · нагорода наприкінці</div>
+      </div>
+      <div class="hero-art" aria-hidden="true"><span class="planet">🌐</span><span class="bubble b1">💌</span><span class="bubble b2">😊</span><span class="bubble b3">✨</span></div>
+    </section>
+
+    <section id="gameScreen" class="hidden">
+      <div class="stats">
+        <div class="stat"><small>ТВОЇ БАЛИ</small><strong id="score">0</strong></div>
+        <div class="stat"><small>ПРАВИЛЬНО</small><strong id="correctCount">0 / 6</strong></div>
+        <div class="stat"><small>ВИПРОБУВАННЯ</small><strong id="stepCount">1 / 6</strong></div>
+      </div>
+      <div class="card">
+        <div class="question-head"><span id="levelLabel" class="level">Рівень 1 · Розминка</span><span id="questionNumber" class="qnum">Завдання 1 із 6</span></div>
+        <div class="progress-shell" role="progressbar" aria-label="Прогрес проходження" aria-valuemin="0" aria-valuemax="6" aria-valuenow="0" id="progressBar"><div id="progressFill" class="progress-fill"></div></div>
+        <div id="scenario" class="scenario"><span class="emoji" id="scenarioEmoji">💬</span><p id="scenarioText"></p></div>
+        <h2 id="questionText" class="question"></h2>
+        <div id="answers" class="answers"></div>
+        <div id="feedback" class="feedback" role="status" aria-live="polite"></div>
+        <div class="actions"><span id="pointsHint" class="hint">За правильну відповідь: 10 балів</span><button id="nextBtn" class="primary hidden">Далі →</button></div>
+      </div>
+    </section>
+
+    <section id="resultScreen" class="card result hidden" aria-live="polite">
+      <div class="award" id="awardIcon">🏆</div>
+      <div class="eyebrow">Місію завершено!</div>
+      <h1 id="resultTitle">Ти — майстер мережевого етикету!</h1>
+      <p id="resultText">Твої добрі слова роблять інтернет кращим.</p>
+      <div class="result-grid">
+        <div class="result-metric"><strong id="finalCorrect">0/6</strong><span>правильних відповідей</span></div>
+        <div class="result-metric"><strong id="finalPercent">0%</strong><span>виконання</span></div>
+        <div class="result-metric"><strong id="finalScore">0</strong><span>балів</span></div>
+      </div>
+      <div id="finalBadge" class="badge-line">🌟 Доброзичливий співрозмовник</div>
+      <p id="finalSummary">Пам’ятай: за екраном — справжня людина.</p>
+      <button id="restartBtn" class="primary">↻ Спробувати ще раз</button>
+    </section>
+  </main>
+  <div class="footer">Думай перед тим, як надсилати. Пиши з повагою 💜</div>
+</div>
+<script>
+"use strict";
+
+/* НАЛАШТУВАННЯ ДЛЯ ВЧИТЕЛЯ: змінюйте назву, кольори, бали й завдання тут. */
+const CONFIG = {
+  title: "Місія: Мережевий етикет",
+  intro: "У віртуальному місті повідомлення іноді губляться, а емоції — плутаються. Допоможи героям спілкуватися ввічливо, безпечно та з повагою!",
+  colors: { primary: "#6657d9", primaryDark: "#4e40bd" },
+  messages: {
+    correct: "Чудово! Саме так і варто вчинити.",
+    incorrect: "Цього разу не зовсім так. Запам’ятай правильний варіант і рухайся далі.",
+    finishExcellent: "Ти чудово орієнтуєшся в мережевому етикеті!",
+    finishGood: "Гарна робота! Ще трохи практики — і ти впевнено впораєшся з такими ситуаціями.",
+    finishPractice: "Ти вже зробив важливий крок. Повтори підказки та спробуй ще раз!"
+  },
+  questions: [
+    {
+      level: "Рівень 1 · Розминка", emoji: "👋",
+      scenario: "Ти приєднався / приєдналася до класного чату, де вже спілкуються однокласники.",
+      question: "Як найкраще розпочати розмову?",
+      options: ["Написати привітання й коротко пояснити, що хочеш запитати", "Одразу надіслати багато знаків оклику", "Написати «Відповідайте негайно!»"],
+      correct: 0, points: 10,
+      explanation: "Привітання та зрозуміле запитання допомагають почати розмову ввічливо."
+    },
+    {
+      level: "Рівень 1 · Добрі слова", emoji: "😊",
+      scenario: "Однокласник допоміг тобі розібратися із завданням у чаті.",
+      question: "Яка відповідь буде найввічливішою?",
+      options: ["«Ну нарешті!»", "«Дякую за допомогу, тепер зрозуміло!»", "Не відповідати ніколи"],
+      correct: 1, points: 10,
+      explanation: "Подяка показує, що ти цінуєш час і допомогу іншої людини."
+    },
+    {
+      level: "Рівень 2 · Читай уважно", emoji: "🔠",
+      scenario: "Ти дуже хочеш, щоб друг помітив твоє повідомлення.",
+      question: "Чому не варто писати все повідомлення ВЕЛИКИМИ ЛІТЕРАМИ?",
+      options: ["Так повідомлення завжди видаляється", "Так текст стає невидимим", "У мережевому спілкуванні це може сприйматися як крик"],
+      correct: 2, points: 15,
+      explanation: "Великі літери в усьому повідомленні можуть здаватися криком або агресією."
+    },
+    {
+      level: "Рівень 2 · Пауза перед відправленням", emoji: "🤔",
+      scenario: "Ти розсердився / розсердилася через коментар і хочеш негайно відповісти образливо.",
+      question: "Яка дія допоможе уникнути сварки?",
+      options: ["Зробити паузу, заспокоїтися й написати відповідь без образ", "Написати ще образливіше", "Поширити коментар у всіх чатах"],
+      correct: 0, points: 15,
+      explanation: "Пауза допомагає заспокоїтися. Критикувати можна вчинок чи думку, але не принижувати людину."
+    },
+    {
+      level: "Рівень 3 · Межі та приватність", emoji: "🔒",
+      scenario: "Ти хочеш переслати в інший чат скриншот особистого листування друга.",
+      question: "Що потрібно зробити перед поширенням приватного повідомлення?",
+      options: ["Переслати всім, адже це лише скриншот", "Отримати дозвіл автора повідомлення", "Додати смішні емодзі й переслати без запитання"],
+      correct: 1, points: 20,
+      explanation: "Особисте листування не слід поширювати без дозволу людини, яка його написала."
+    },
+    {
+      level: "Рівень 3 · Допоможи спільноті", emoji: "🤝",
+      scenario: "У груповому чаті хтось висміює однокласника. Ти бачиш це повідомлення.",
+      question: "Яка поведінка найкраще підтримує безпечне й доброзичливе спілкування?",
+      options: ["Поставити смішний смайлик, щоб усі сміялися", "Переслати повідомлення іншим друзям", "Не підтримувати насмішки, підтримати однокласника й повідомити дорослому, якому довіряєш, якщо цькування триває"],
+      correct: 2, points: 20,
+      explanation: "Не підсилюй цькування. Підтримай того, кого ображають, і звернися до дорослого, якщо ситуація не припиняється."
+    }
+  ]
+};
+
+const $ = (id) => document.getElementById(id);
+const startScreen = $("startScreen"), gameScreen = $("gameScreen"), resultScreen = $("resultScreen");
+let currentIndex = 0, score = 0, correctCount = 0, answered = false, answerHistory = [];
+
+function applyConfig() {
+  document.title = CONFIG.title;
+  $("gameTitle").textContent = CONFIG.title;
+  $("introText").textContent = CONFIG.intro;
+  document.documentElement.style.setProperty("--primary", CONFIG.colors.primary);
+  document.documentElement.style.setProperty("--primary-dark", CONFIG.colors.primaryDark);
+  $("correctCount").textContent = `0 / ${CONFIG.questions.length}`;
+  $("stepCount").textContent = `1 / ${CONFIG.questions.length}`;
+  $("progressBar").setAttribute("aria-valuemax", String(CONFIG.questions.length));
+}
+function showScreen(screen) {
+  [startScreen, gameScreen, resultScreen].forEach(el => el.classList.add("hidden"));
+  screen.classList.remove("hidden");
+}
+function startGame() {
+  currentIndex = 0; score = 0; correctCount = 0; answered = false; answerHistory = [];
+  $("score").textContent = "0";
+  $("correctCount").textContent = `0 / ${CONFIG.questions.length}`;
+  $("stepCount").textContent = `1 / ${CONFIG.questions.length}`;
+  showScreen(gameScreen);
+  renderQuestion();
+  window.scrollTo({top:0, behavior:"smooth"});
+}
+function renderQuestion() {
+  answered = false;
+  const q = CONFIG.questions[currentIndex];
+  $("levelLabel").textContent = q.level;
+  $("questionNumber").textContent = `Завдання ${currentIndex + 1} із ${CONFIG.questions.length}`;
+  $("stepCount").textContent = `${currentIndex + 1} / ${CONFIG.questions.length}`;
+  $("scenarioEmoji").textContent = q.emoji;
+  $("scenarioText").textContent = q.scenario;
+  $("questionText").textContent = q.question;
+  $("pointsHint").textContent = `За правильну відповідь: ${q.points} балів`;
+  $("feedback").className = "feedback";
+  $("feedback").textContent = "";
+  $("nextBtn").classList.add("hidden");
+  $("nextBtn").textContent = currentIndex === CONFIG.questions.length - 1 ? "До результатів 🏆" : "Далі →";
+  $("progressFill").style.width = `${(currentIndex / CONFIG.questions.length) * 100}%`;
+  $("progressBar").setAttribute("aria-valuenow", String(currentIndex));
+  const answers = $("answers");
+  answers.replaceChildren();
+  const letters = ["А", "Б", "В", "Г", "Д"];
+  q.options.forEach((option, index) => {
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = "answer";
+    button.innerHTML = `<span class="letter">${letters[index]}</span><span></span>`;
+    button.lastElementChild.textContent = option;
+    button.addEventListener("click", () => chooseAnswer(index));
+    answers.appendChild(button);
+  });
+}
+function chooseAnswer(selectedIndex) {
+  if (answered) return;
+  answered = true;
+  const q = CONFIG.questions[currentIndex];
+  const buttons = Array.from($("answers").querySelectorAll("button"));
+  buttons.forEach((button, index) => {
+    button.disabled = true;
+    if (index === q.correct) button.classList.add("correct");
+    if (index === selectedIndex && index !== q.correct) button.classList.add("wrong");
+  });
+  const isCorrect = selectedIndex === q.correct;
+  if (isCorrect) {
+    score += q.points;
+    correctCount++;
+  }
+  answerHistory.push({selected:selectedIndex, correct:isCorrect});
+  $("score").textContent = String(score);
+  $("correctCount").textContent = `${correctCount} / ${CONFIG.questions.length}`;
+  $("progressFill").style.width = `${((currentIndex + 1) / CONFIG.questions.length) * 100}%`;
+  $("progressBar").setAttribute("aria-valuenow", String(currentIndex + 1));
+  const feedback = $("feedback");
+  feedback.className = `feedback show ${isCorrect ? "good" : "bad"}`;
+  const heading = document.createElement("strong");
+  heading.textContent = isCorrect ? `+${q.points} балів! ${CONFIG.messages.correct}` : CONFIG.messages.incorrect;
+  const explanation = document.createElement("span");
+  explanation.textContent = `${isCorrect ? "" : `Правильна відповідь: «${q.options[q.correct]}». `}${q.explanation}`;
+  feedback.replaceChildren(heading, explanation);
+  $("nextBtn").classList.remove("hidden");
+  $("nextBtn").focus();
+}
+function nextQuestion() {
+  if (!answered) return;
+  if (currentIndex < CONFIG.questions.length - 1) {
+    currentIndex++;
+    renderQuestion();
+    window.scrollTo({top:0, behavior:"smooth"});
+  } else {
+    showResults();
+  }
+}
+function showResults() {
+  const total = CONFIG.questions.length;
+  const percent = Math.round((correctCount / total) * 100);
+  const maxScore = CONFIG.questions.reduce((sum, q) => sum + q.points, 0);
+  $("finalCorrect").textContent = `${correctCount}/${total}`;
+  $("finalPercent").textContent = `${percent}%`;
+  $("finalScore").textContent = `${score}/${maxScore}`;
+  $("progressFill").style.width = "100%";
+  let icon, title, message, badge;
+  if (percent >= 85) {
+    icon = "🏆"; title = "Ти — майстер мережевого етикету!"; message = CONFIG.messages.finishExcellent; badge = "🌟 Зірка доброзичливого спілкування";
+  } else if (percent >= 50) {
+    icon = "🥇"; title = "Чудовий поступ!"; message = CONFIG.messages.finishGood; badge = "💜 Уважний інтернет-співрозмовник";
+  } else {
+    icon = "🌱"; title = "Твоя пригода — гарний початок!"; message = CONFIG.messages.finishPractice; badge = "✨ Дослідник мережевого етикету";
+  }
+  $("awardIcon").textContent = icon;
+  $("resultTitle").textContent = title;
+  $("resultText").textContent = message;
+  $("finalBadge").textContent = badge;
+  $("finalSummary").textContent = `Ти правильно виконав / виконала ${correctCount} із ${total} завдань і набрав / набрала ${score} балів. Пам’ятай: за екраном — справжня людина.`;
+  showScreen(resultScreen);
+  window.scrollTo({top:0, behavior:"smooth"});
+}
+$("startBtn").addEventListener("click", startGame);
+$("nextBtn").addEventListener("click", nextQuestion);
+$("restartBtn").addEventListener("click", startGame);
+applyConfig();
+</script>
+</body>
+</html>
